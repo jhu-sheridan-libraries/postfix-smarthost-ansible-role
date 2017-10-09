@@ -1,0 +1,21 @@
+---
+# tasks file for postfix-smarthost-ansible-role/
+- name: Ensure Postfix is installed
+  become: true
+  package:
+    name: postfix
+    state: present
+
+- name: Ensure postfix is set to start at boot
+  become: true
+  service:
+    name: postfix
+    state: started
+    enabled: yes
+
+- name: Ensure smarthost is set as expected
+  lineinfile:
+    path: /etc/postfix/main.cf
+    regexp: '^relayhost='
+    line: "relayhost={{ postfix_relay_host }}"
+  notify: restart postfix service

@@ -1,0 +1,7 @@
+---
+# handlers file for postfix-smarthost-ansible-role/
+- name: restart postfix service
+  become: true
+  service:
+    name: postfix
+    state: restarted

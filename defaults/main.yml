@@ -1,0 +1,4 @@
+---
+# defaults file for postfix-smarthost-ansible-role/
+
+postfix_relay_host: ""
