@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - postfix-smarthost-ansible-role/
+    - { name: postfix-smarthost-ansible-role, postfix_relay_host='test.domain.edu' }
