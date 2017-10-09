@@ -1,6 +1,6 @@
 galaxy_info:
   author: Derek Belrose <dbelrose@jhu.edu>
-  description: Systems Engineer
+  description: Manages relayhost entries in Postfix
   company: Johns Hopkins University Sheridan Libraries and Museums
 
   # If the issue tracker for your role is not on github, uncomment the
