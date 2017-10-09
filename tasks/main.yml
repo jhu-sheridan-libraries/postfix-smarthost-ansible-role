@@ -17,6 +17,6 @@
   become: true
   lineinfile:
     path: /etc/postfix/main.cf
-    regexp: '^relayhost='
-    line: "relayhost={{ postfix_relay_host }}"
+    regexp: '^relayhost ='
+    line: "relayhost = {{ postfix_relay_host }}"
   notify: restart postfix service
