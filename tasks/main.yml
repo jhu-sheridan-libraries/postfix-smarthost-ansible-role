@@ -14,6 +14,7 @@
     enabled: yes
 
 - name: Ensure smarthost is set as expected
+  become: true
   lineinfile:
     path: /etc/postfix/main.cf
     regexp: '^relayhost='
